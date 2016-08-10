@@ -18,6 +18,10 @@ group :development, :test do
   gem 'valid_attribute'
 end
 
+group :test do
+  gem 'database_cleaner'
+end
+
 group :development do
   gem 'web-console', '~> 2.0'
 end
