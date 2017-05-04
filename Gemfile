@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 
-gem 'rails', '5.0.2'
+gem 'rails', '5.1.0'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -17,6 +17,6 @@ group :test do
 end
 
 group :development do
-  gem 'web-console', '~> 2.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
