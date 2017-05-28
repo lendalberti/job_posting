@@ -21,12 +21,38 @@ The skeleton app contains enough gems to get going, but feel free to add more.
 
 
 
-## My Notes
-Missing functioanlity:
+## ------------------------------------------ My Notes ------------------------------------------
+Missing Functioanlity
   * Authentication/Authorization
     - for a real app, I would've used something like 'devise'or 'CanCanCan', 
       but since I was limited in my available time, I left it out.
-    - as it stands now, anyone can show/add/edit/delete... a non-admin user would 
-      be able to only show a listing.
-  *
+    - as it stands now, anyone can show/add/edit/delete... done correctly,
+      only a logged in admin would be able to add/edit/delete postings;
+      a non-admin user would be able to only show a listing.
+
+User Interface
+  * the 'Action' column in the wireframe didn't make sense, so I just implemented
+    a typical set of 'show/edit/delete' links for every row.
+  * would've normally used icons, and taking advantage of ajax calls.
+  * used DataTables jQuery library for job postings, as it offers nice paging and 
+    sorting capabilities.
+
+Database
+  * didn't see any evidence of of a database having been 'configured', as stated above,
+    so went ahead and created my own schema with the following tables: users, jobs, 
+    categories, and statuses. 
+  * normally, would have created some admin/crud capability for these tables,
+    but instead supplied dummy data via 'seeds.rb'.
   
+Rails Version
+  * the Gemfile specified rails 5.1.0, which I haven't used yet, and made note of
+    some of the differences/new features.
+
+
+
+
+
+
+
+
+

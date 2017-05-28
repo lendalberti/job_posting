@@ -20,11 +20,6 @@ Status.create!( name: 'New')
 Status.create!( name: 'Pending')  
 Status.create!( name: 'Complete')  
 
-      # t.integer  :user_id,     null: false
-      # t.integer  :category_id, null: false
-      # t.string   :location,    null: false
-      # t.integer  :status_id,   null: false
-
 Job.create!( user_id: 2, category_id: 1, location: 'Mass Ave, Cambridge', status_id: 1, description: 'job posting description goes here')
 Job.create!( user_id: 1, category_id: 2, location: 'South Station, Boston', status_id: 2, description: 'job posting description goes here')
 Job.create!( user_id: 3, category_id: 3, location: '100 Milk St, Cambridge', status_id: 1, description: 'job posting description goes here')

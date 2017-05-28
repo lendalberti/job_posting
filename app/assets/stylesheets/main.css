@@ -4,7 +4,7 @@ body > h1 {
 }
 
 #job_posting_table > tbody > tr:nth-child(odd) {
-   background-color: lightyellow;
+   background-color: #F6F9ED;
 }
 
 #job_posting_table_wrapper {
