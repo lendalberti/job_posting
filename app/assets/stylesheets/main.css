@@ -1,0 +1,64 @@
+
+body > h1 {
+  padding: 10px;
+}
+
+#job_posting_table > tbody > tr:nth-child(odd) {
+   background-color: lightyellow;
+}
+
+#job_posting_table_wrapper {
+  margin-top: 70px;
+}
+
+.job_action {
+  border-radius: 5px;
+  color: black;
+  background-color: #dcdcdc;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.job_action:hover {
+  background-color: gray;
+  color: white;
+}
+
+.cancel_link {
+  color: red;
+}
+
+.job_field {
+  width: 400px;
+}
+
+.job_label {
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+  color: black;
+}
+
+.job_field {
+  font-family: Courier;
+  color: black;
+}
+
+.required {
+  color: red;
+}
+
+td.job_field,
+td.job_label {
+  padding-bottom: 1em;
+}
+
+.div_actions {
+  margin-top: 50px;
+}
+
+.div_show_job {
+  border: 1px solid lightgray;
+  padding: 10px;
+  width: 50%;
+}

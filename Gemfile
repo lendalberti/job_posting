@@ -20,3 +20,5 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+gem 'jquery-datatables-rails', '~> 3.4.0'
+

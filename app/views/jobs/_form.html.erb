@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+<div class='div_show_job'> 
+  <%= form_with(model: job, local: true) do |f| %>
+
+    <table>
+      <tr><td class='job_label'><span class='required'> * </span>Poster:</td>    
+          <td class='job_field'><%= select("job_poster_select", "user_id", options_for_select(@job_posters,  (action_name == 'edit' ? @job.user_id : '')   ) ) %></td></tr>
+      
+      <tr><td class='job_label'><span class='required'> * </span>Category:</td>  
+          <td class='job_field'><%= select("category_select", "category_id", options_for_select(@categories, (action_name == 'edit' ? @job.category.id : '')   ) ) %> </td></tr>
+      
+      <tr><td class='job_label'><span class='required'> * </span>Location:</td>  
+          <td class='job_field'><%= f.text_field :location, :class => 'job_field', :id => 'location' %></td></tr>
+      
+      <tr><td class='job_label'><span class='required'> * </span>Status:</td>    
+          <td class='job_field'><%= select("status_select", "status_id", options_for_select(@statuses,  (action_name == 'edit' ? @job.status.id : '')   ) ) %> </td></tr>
+      
+      <tr><td class='job_label'><span class='required'> * </span>Description:</td>    
+          <td class='job_field'><%= f.text_area :description, :class => 'job_field', :id => 'description', rows: 8 %></td></tr>
+    </table>
+  <% end %>
+
+
+  <div class='div_actions'>
+    <a href="#"><button id='button_update_job' class="job_action">Update Posting</button></a>
+    <%= link_to "Cancel", jobs_path, class: 'cancel_link' %>
+  </div>
+
+</div>
+
+
+
+
+
+<%
+=begin
+%> 
+< %= form_with(model: job, local: true) do |form| %>
+  <% if job.errors.any? %>
+    <div id="error_explanation">
+      <h2>< %= pluralize(job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% job.errors.full_messages.each do |message| %>
+        <li>< %= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    < %= form.submit %>
+  </div>
+<% end %>
+
+ 
+
+<div class="row">
+  <div class="col-md-6">
+    < %= form_for(permission, :html => {:class => 'form-group'}) do |f| %>
+      <div class="field form-group">
+        < %= f.label :name %>
+        < %= f.text_field :name, :class => 'form-control' %>
+      </div>
+
+      <div class="actions btn-group">
+        < %= f.submit :name => 'name', :class => 'btn btn-primary' %>
+        < %= link_to 'Back', permissions_path, :class => 'btn btn-default' %>
+      </div>
+    < % end %>
+  </div>
+</div>
+
+
+<%
+=end
+%> 

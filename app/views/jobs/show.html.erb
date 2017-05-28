@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Job Posting from <%= @job.created_at.strftime("%b %e, %Y") %></h2>
+
+<div class='div_show_job'>
+  <table>
+    <tr><td class='job_label'>Poster:</td>    <td class='job_field'><%= @job.user.fullname %></td></tr>
+    <tr><td class='job_label'>Category:</td>  <td class='job_field'><%= @job.category.name %></td></tr>
+    <tr><td class='job_label'>Location:</td>  <td class='job_field'><%= @job.location %></td></tr>
+    <tr><td class='job_label'>Status:</td>    <td class='job_field'><%= @job.status.name %></td></tr>
+    <tr><td class='job_label'>Posted:</td>    <td class='job_field'><%= @job.created_at.strftime("%b %e, %Y") %></td></tr>
+    <tr><td class='job_label'>Description:</td>    <td class='job_field'><%= @job.description %></td></tr>
+  </table>
+  
+  <br />
+  <a href="<%= edit_job_path(@job) %>"><button class="job_action">Edit</button></a>
+  <a href="<%= jobs_path %>"><button class="job_action">Back to Index</button></a>
+</div>
+

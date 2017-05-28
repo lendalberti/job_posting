@@ -1,0 +1,5 @@
+<h2>Edit Job Posting from <%= @job.created_at.strftime("%b %e, %Y") %></h2>
+
+<span class='required'> * </span> = required field
+
+<%= render 'form', job: @job %>

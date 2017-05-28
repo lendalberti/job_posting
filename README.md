@@ -18,3 +18,15 @@ Create a rails app based on the specifications listed above. You don't need to g
 
 ## Getting Started
 The skeleton app contains enough gems to get going, but feel free to add more.
+
+
+
+## My Notes
+Missing functioanlity:
+  * Authentication/Authorization
+    - for a real app, I would've used something like 'devise'or 'CanCanCan', 
+      but since I was limited in my available time, I left it out.
+    - as it stands now, anyone can show/add/edit/delete... a non-admin user would 
+      be able to only show a listing.
+  *
+  
